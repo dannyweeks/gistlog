@@ -1,5 +1,6 @@
 <?php
 
+use Gistlog\Authors\Author;
 use Gistlog\Gists\Gistlog;
 use Gistlog\Gists\Comment;
 
@@ -126,6 +127,6 @@ class GistlogTest extends TestCase
 
         $gistlog = Gistlog::fromGitHub($githubGist);
 
-        $this->assertEquals("anonymous", $gistlog->author);
+        $this->assertEquals(Author::ANONYMOUS_USERNAME, $gistlog->author);
     }
 }

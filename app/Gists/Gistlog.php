@@ -54,7 +54,7 @@ class Gistlog
             $gistlog->author = $githubGist['owner']['login'];
             $gistlog->avatarUrl = $githubGist['owner']['avatar_url'];
         } else {
-            $gistlog->author = Author::ANONYMOUS_USERNAME; 
+            $gistlog->author = Author::ANONYMOUS_USERNAME;
             $gistlog->avatarUrl = Author::ANONYMOUS_AVATAR_URL;
         }
 
